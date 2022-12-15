@@ -8,9 +8,9 @@ export default function Statistics({ stats }) {
         <ul class="stat-list">
           {stats.map(({ id, label, percentage }) => (
           <li class="item" key={id}>
-          <span class="label">{label}</span>
-          <span class="percentage">{percentage}%</span>
-      </li>
+            <span class="label">{label}</span>
+            <span class="percentage">{percentage}%</span>
+          </li>
           ))}
       
       </ul>

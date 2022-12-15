@@ -6,6 +6,13 @@ import user from '../data/user.json'
 import Statistics  from './statistics/statistics'
 import statisticsData from '../data/data.json'
 
+//FriendsList
+import FriendList from './friendsList/friendsList'
+import friends from '../data/friends.json'
+
+// TransactionHistory
+import TransactionHistory  from './transactionHistory/transaction'
+import transactions from '../data/transactions.json'
 
 export default function App() {
   return (
@@ -21,6 +28,12 @@ export default function App() {
       </div>
       <div>
         <Statistics title="Upload stats" stats={statisticsData} />
+      </div>
+      <div>
+        <FriendList friends={friends} />;
+      </div>
+      <div>
+        <TransactionHistory items={transactions} />;
       </div>
         
     </div>
