@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import FriendsCard from "./FriendsCardComponent"
 import css from './FriendsCardComponent.module.css'
-import { coinRandom } from '../Random_Function'
+import { coinRandom } from '../randomFunction'
 export default function FriendsList({ friends }) {
     return (
         <ul className={css.friendlist}>
