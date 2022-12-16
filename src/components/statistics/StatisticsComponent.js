@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import css from '../statistics/StatisticsComponent.module.css'
 import GetRandomColor from '../GetRandomColor'
-export default function Statistics({ stats }) {
+export default function Statistics({ title, stats }) {
   return (
     <div>
       <section className={css.statistics}>
-        <h2 className={css.title}>Upload stats</h2>
+        {title && <h2 className={css.title}>{title}</h2>}
 
         <ul className={css.statlist}>
           {stats.map(({ id, label, percentage }) => (
@@ -21,6 +21,7 @@ export default function Statistics({ stats }) {
 }
 
 Statistics.propTypers = {
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
