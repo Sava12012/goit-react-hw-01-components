@@ -1,17 +1,17 @@
 // UserCard
-import UserCard from './userCard/userCard'
+import UserCard from './userCard/UserCardComponent'
 import user from '../data/user.json'
 
 //Statistics
-import Statistics  from './statistics/statistics'
+import Statistics  from './statistics/StatisticsComponent'
 import statisticsData from '../data/data.json'
 
 //FriendsList
-import FriendList from './friendsList/friendsList'
+import FriendList from './friendsList/FriendsListComponent'
 import friends from '../data/friends.json'
 
 // TransactionHistory
-import TransactionHistory  from './transactionHistory/transaction'
+import TransactionHistory  from './transactionHistory/TransactionComponent'
 import transactions from '../data/transactions.json'
 
 export default function App() {

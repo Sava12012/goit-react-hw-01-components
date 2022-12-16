@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import css from '../userCard/userCard.module.css'
+import css from '../userCard/UserCardComponent.module.css'
 export default function UserCard({ username, tag, location, avatar, stats: { followers, views, likes } }) {
   return (
     <div className={css.profile}>

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import FriendsCard from "./friendsCard"
-import css from './friendsCard.module.css'
-import { coinRandom } from '../randomFunction'
+import FriendsCard from "./FriendsCardComponent"
+import css from './FriendsCardComponent.module.css'
+import { CoinRandom } from '../Random_Function'
 export default function FriendsList({ friends }) {
     return (
         <ul className={css.friendlist}>
@@ -10,7 +10,7 @@ export default function FriendsList({ friends }) {
                         key={id}
                         avatar={avatar}
                         name={name}
-                        isOnline={coinRandom()}
+                        isOnline={CoinRandom()}
                         />
                     )
                 )
