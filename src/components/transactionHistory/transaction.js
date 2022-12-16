@@ -1,7 +1,9 @@
-export default function FriendsList({ items }){
+import PropTypes from 'prop-types';
+import css from '../transactionHistory/transactionHistory.module.css'
+export default function TransactionHistory({ items }) {
   return (
-    <table>
-      <thead>
+    <table className={css.table}>
+      <thead className={css.thead}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
@@ -10,7 +12,7 @@ export default function FriendsList({ items }){
       </thead>
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
+          <tr className={css.tablerow} key={id}>
             <td>{type}</td>
             <td>{amount}</td>
             <td>{currency}</td>
@@ -19,4 +21,15 @@ export default function FriendsList({ items }){
       </tbody>
     </table>
   );
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };

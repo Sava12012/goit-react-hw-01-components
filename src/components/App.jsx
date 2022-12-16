@@ -30,10 +30,10 @@ export default function App() {
         <Statistics title="Upload stats" stats={statisticsData} />
       </div>
       <div>
-        <FriendList friends={friends} />;
+        <FriendList friends={friends} />
       </div>
       <div>
-        <TransactionHistory items={transactions} />;
+        <TransactionHistory items={transactions} />
       </div>
         
     </div>

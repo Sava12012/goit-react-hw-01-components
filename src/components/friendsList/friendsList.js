@@ -1,9 +1,10 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import FriendsCard from "./friendsCard"
+import css from './friendsCard.module.css'
 import { coinRandom } from '../randomFunction'
 export default function FriendsList({ friends }) {
     return (
-        <ul>
+        <ul className={css.friendlist}>
             {friends.map(({ id, avatar, name, }) => (
                     <FriendsCard
                         key={id}
@@ -15,5 +16,13 @@ export default function FriendsList({ friends }) {
                 )
             }
         </ul>
-    );
+    )
+}
+
+FriendsList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ),
 };
